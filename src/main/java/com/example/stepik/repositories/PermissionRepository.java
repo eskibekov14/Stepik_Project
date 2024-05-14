@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-
 public interface PermissionRepository extends JpaRepository<Permission, Long> {
     Permission findAllByRole(String role);
 }
