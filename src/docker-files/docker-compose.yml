@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+
+  stepik-demo:
+    image: stepik/demo
+    ports:
+      - "7070:7070"
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: course
+      POSTGRES_USER: postgres
+    
+      
+
