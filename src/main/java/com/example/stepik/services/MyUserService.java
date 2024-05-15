@@ -21,7 +21,6 @@ public class MyUserService implements UserDetailsService {
 
     private final UsersRepository usersRepository;
 
-
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Users user = usersRepository.findAllByEmail(email);
@@ -30,7 +29,4 @@ public class MyUserService implements UserDetailsService {
         }
         return usersRepository.findAllByEmail(email);
     }
-
-
-
 }
